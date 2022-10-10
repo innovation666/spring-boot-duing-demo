@@ -26,7 +26,7 @@ public class GuestController {
     @Autowired
     private GuestService guestService;
     //返回页面的路径
-    private String path = "";
+    //private String path = "";
 
     //查询嘉宾列表
     //@RequestMapping(method = RequestMethod.GET)
@@ -34,7 +34,7 @@ public class GuestController {
     private String getGuests(Model model){
         List<Guest> guests = guestService.getGuests();
         model.addAttribute("guests",guests);
-        return path +"/list";
+        return "list";
     }
 
 
